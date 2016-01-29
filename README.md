@@ -9,7 +9,7 @@ Node.js SDK for [processon](https://www.processon.com/).
 ## API
 
 ````
-var processon = require('processon');
+var Client = require('processon').Client;
 var client = new Client({
   access_token: 'your access_token'
 });
