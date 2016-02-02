@@ -32,8 +32,6 @@ describe('Client constructor', function() {
 describe('Client APIs', function() {
   var client = null;
 
-  this.timeout(0);
-
   it('process.env.PROCESSON_ACCESS_TOKEN should set for test', function() {
     expect(access_token).to.be.a('string');
 
@@ -55,7 +53,6 @@ describe('Client APIs', function() {
     client.getDiagrams(function(err, result) {
       expect(err).to.be.null;
       expect(result.status).to.be.equal('success');
-      expect(result.data).to.be.a('array');
       done();
     });
   });
@@ -64,17 +61,51 @@ describe('Client APIs', function() {
     client.getRecentDiagrams(function(err, result) {
       expect(err).to.be.null;
       expect(result.status).to.be.equal('success');
-      expect(result.data).to.be.a('array');
       done();
     });
   });
 
   it('get user clloa diagrams', function(done) {
+    // 目前此API响应过于慢
+    this.timeout(0);
     client.getCollaDiagrams(function(err, result) {
       expect(err).to.be.null;
       expect(result.status).to.be.equal('success');
-      // expect(result.data).to.be.a('array');
       done();
     });
   });
 });
+
+describe('client APIs with invalid access_token', function() {
+  var client = new processon.Client({
+    access_token: 'invalid access_token'
+  });
+
+  it('should fail when request user info', function(done) {
+    client.getUser(function(err, result) {
+      expect(err).to.not.be.null;
+      done();
+    });
+  });
+
+  it('should fail when request user diagrams', function(done) {
+    client.getDiagrams(function(err, result) {
+      expect(err).to.not.be.null;
+      done();
+    });
+  });
+
+  it('should fail when request user recent diagrams', function(done) {
+    client.getRecentDiagrams(function(err, result) {
+      expect(err).to.not.be.null;
+      done();
+    });
+  });
+
+  it('should fail when request user colla diagrams', function(done) {
+    client.getCollaDiagrams(function(err, result) {
+      expect(err).to.not.be.null;
+      done();
+    });
+  });
+})

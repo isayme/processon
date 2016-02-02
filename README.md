@@ -35,5 +35,3 @@ var client = new Client({
 
 ## Test
 > npm test
-
-在写测试用例的时间(2016.01.16), processon的API返回值在我看来还不够一致. 所以测试中忽略了部分检测.

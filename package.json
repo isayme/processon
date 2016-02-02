@@ -1,6 +1,6 @@
 {
   "name": "processon",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "processon SDK for Node.js",
   "main": "index.js",
   "scripts": {
@@ -20,10 +20,10 @@
   },
   "homepage": "https://github.com/isayme/processon",
   "devDependencies": {
-    "chai": "^3.4.1",
-    "mocha": "^2.3.4"
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
   },
   "dependencies": {
-    "request": "^2.67.0"
+    "request": "^2.69.0"
   }
 }
