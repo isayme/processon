@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "data":[{
+    "createTime": "2016-01-15 00:19:12",
+    "title": "在线流程图",
+    "category": "mind_right",
+    "lastModify": "2016-01-15 00:19:12",
+    "likeCount": "0",
+    "_id": "5697ca80e4b038369d2e39c3",
+    "status": "private",
+    "description": "",
+    "thumb": "https://www.processon.com/chart_image/thumb/5697ca80e4b038369d2e39c5.png",
+    "teamId": null,
+    "viewCount": "1",
+    "viewUrl": "http://open.processon.com/api/view/4f9b468c0cf2c37863ace979"
+  }]
+}

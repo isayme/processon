@@ -1,10 +1,13 @@
 {
   "name": "processon",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "processon SDK for Node.js",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "npm run lint && mocha",
+    "lint": "standard",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/**/*.js && npm run coveralls"
   },
   "repository": {
     "type": "git",
@@ -21,9 +24,13 @@
   "homepage": "https://github.com/isayme/processon",
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^2.4.5"
+    "coveralls": "^2.11.12",
+    "istanbul": "^0.4.4",
+    "mocha": "^3.0.0",
+    "nock": "^8.0.0",
+    "standard": "^7.1.2"
   },
   "dependencies": {
-    "request": "^2.69.0"
+    "request": "^2.74.0"
   }
 }

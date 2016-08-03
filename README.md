@@ -2,6 +2,7 @@
 Node.js SDK for [processon](https://www.processon.com/).
 
 ![travis](https://img.shields.io/travis/isayme/processon.svg)
+[![Coverage Status](https://coveralls.io/repos/github/isayme/processon/badge.svg?branch=master)](https://coveralls.io/github/isayme/processon?branch=master)
 
 ## Install
 > npm install processon
